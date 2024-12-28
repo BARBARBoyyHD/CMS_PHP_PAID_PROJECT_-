@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="bg-white">
+      <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
+        <main
+          class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6 "
+        >
+          <div class="w-full flex justify-center flex-col items-center ">
+            <a class="block text-blue-600" href="#">
+              <span class="sr-only">Home</span>
+            </a>
+
+            <h1
+              class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"
+            >
+              Selamat Datang
+            </h1>
+
+            <form
+              name="loginForm"
+              action="../php/login.php"
+              class="mt-8 gap-6  flex flex-col justify-center w-[auto] h-auto"
+              method="POST"
+              onsubmit="return validateForm()"
+            >
+              <div class="col-span-6 sm:col-span-3">
+                <label
+                  for="username"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  username
+                </label>
+
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  class="mt-1 w-full rounded-md border-black bg-white text-sm text-gray-700 shadow-sm"
+                  placeholder="Enter your username"
+                  required
+                />
+              </div>
+
+              <div class="col-span-6 sm:col-span-3">
+                <label
+                  for="Password"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  Password
+                </label>
+
+                <input
+                  type="password"
+                  id="Password"
+                  name="password"
+                  class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+
+              <div
+                class="col-span-6 sm:flex sm:items-center sm:gap-4 flex-col  h-auto mt-[60px]"
+              >
+                <button
+                  class="inline-block shrink-0 rounded-md border w-[300px] h-[50px] text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500 bg-[#982B1C]"
+                >
+                  Login
+                </button>
+                
+                <p class="mt-4 text-sm text-gray-500 sm:mt-0">
+                  Don't have an account?
+                  <a href="../php/register.php" class="text-gray-700 underline"
+                    >Register</a
+                  >.
+                </p>
+                <p class="mt-4 text-sm text-gray-500 sm:mt-0">
+                 Are you admin ?
+                  <a href="../php/adminLogin.php" class="text-gray-700 underline"
+                    >Admin</a
+                  >.
+                </p>
+              </div>
+            </form>
+          </div>
+        </main>
+        <aside
+          class=" hidden relative block h-16 md:flex lg:order-last lg:col-span-5 lg:h-full xl:col-span-6 bg-[#982B1C] flex justify-center items-center"
+        >
+          <img
+            alt=""
+            src="../assets/seblaktasti.png"
+            class="max-w-full max-h-full object-contain"
+          />
+        </aside>
+      </div>
+    </section>
+  </body>
+</html>

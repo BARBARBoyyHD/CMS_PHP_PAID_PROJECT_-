@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 ">
+    <div class="flex h-screen fixed">
+      <!-- Sidebar -->
+      <div class="w-64 bg-white p-4">
+        <ul>
+          <!-- Makanan -->
+          <li class="mb-4 flex items-center">
+            <img
+              src="https://www.svgrepo.com/show/500569/food.svg"
+              alt="Food Icon"
+              class="w-6 h-6 mr-2"
+            />
+            <a
+              href="/seblaktasti/php/tambahProduk.php"
+              class="text-lg hover:text-[#982B1C] font-bold text-black"
+            >
+              Tambah Produk
+            </a>
+          </li>
+          <li class="mb-4 flex items-center">
+            <img
+              src="https://www.svgrepo.com/show/490734/food-dinner.svg"
+              alt="Lihat Produk"
+              class="w-6 h-6 mr-2"
+            />
+            <a
+              href="/seblaktasti/php/productList.php"
+              class="text-lg hover:text-[#982B1C] font-bold text-black"
+            >
+              Lihat Produk
+            </a>
+          </li>
+          <li class="mb-4 flex items-center">
+            <img
+              src="https://www.svgrepo.com/show/533549/warehouse.svg"
+              alt="Lihat Produk"
+              class="w-6 h-6 mr-2"
+            />
+            <a
+              href="/seblaktasti/php/stokList.php"
+              class="text-lg hover:text-[#982B1C] font-bold text-black"
+            >
+              Lihat stok
+            </a>
+          </li>
+          <!-- Minuman -->
+          <li class="mb-4 flex items-center">
+            <img
+              src="https://svgrepo.com/show/476744/report.svg"
+              alt="Laporan Penjualan"
+              class="w-6 h-6 mr-2"
+            />
+            <a
+              href="/seblaktasti/php/orderTable.php"
+              class="text-lg hover:text-[#982B1C] font-bold text-black"
+            >
+              Laporan Penjualan
+            </a>
+          </li>
+          <li class="mb-4 flex items-center">
+            <img
+              src="https://www.svgrepo.com/show/521712/invoice.svg"
+              alt="Laporan Penjualan"
+              class="w-6 h-6 mr-2"
+            />
+            <a
+              href="/seblaktasti/php/invoiceList.php"
+              class="text-lg hover:text-[#982B1C] font-bold text-black"
+            >
+              Invoice
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

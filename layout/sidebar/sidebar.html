@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <div class="w-64 bg-white p-4 flex flex-col justify-between h-screen">
+       
+        <!-- Push logout to the bottom -->
+        <div class="mt-auto">
+          <ul>
+            <li class="mb-4 flex items-center">
+              <img
+                src="https://www.svgrepo.com/show/502760/logout.svg"
+                alt="Laporan Penjualan"
+                class="w-6 h-6 mr-2"
+              />
+              <a
+                href="/seblaktasti/php/login.php"
+                class="text-lg hover:text-[#982B1C] font-bold text-black"
+              >
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

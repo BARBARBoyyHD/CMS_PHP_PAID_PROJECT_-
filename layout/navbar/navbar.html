@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="mb-4">
+      <nav
+        class="bg-[#982B1C] dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 "
+      >
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          
+            <a href="/seblaktasti/php/login.php"><img src="../assets/seblaktasti.png" alt="Seblaktasti" class="w-[50px] h-[50px] object-contain"> </a>
+          
+
+          <div
+            class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-4"
+          >
+            <li class="mb-4 flex items-center gap-2">
+              <img
+                src="https://www.svgrepo.com/show/533043/cart-shopping.svg"
+                alt="Cart"
+                class="w-6 h-6 mr-2"
+              />
+              <a
+                href="/seblaktasti/php/cart.php"
+                class="text-lg hover:text-white font-bold text-black"
+              >
+                Cart
+              </a>
+              <span
+                id="cart-count"
+                class="w-[20px] h-[20px] bg-black border border-white flex justify-center items-center rounded-full text-white font-bold"
+              >
+                0
+              </span>
+            </li>
+            <li class="mb-4 flex items-center">
+              <img
+                src="https://www.svgrepo.com/show/502760/logout.svg"
+                alt="Logout"
+                class="w-6 h-6 mr-2"
+              />
+              <a
+                href="/seblaktasti/php/login.php"
+                class="text-lg hover:text-white font-bold text-black"
+              >
+                Logout
+              </a>
+            </li>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <script>
+     let cart = JSON.parse(localStorage.getItem('cart')) || []; // Load the cart from localStorage
+
+  function saveCartToLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  function updateCartCount() {
+  // Calculate the total quantity of items in the cart
+    const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
+  // Update the cart count in the span
+    const cartCountElement = document.getElementById('cart-count');
+    if (cartCountElement) {
+      cartCountElement.textContent = itemCount;
+    }
+  }
+
+function addToCart(id, name, price, category) {
+  const item = cart.find(product => product.id === id);
+  if (item) {
+    item.quantity++;
+  } else {
+    cart.push({ id, name, price, category, quantity: 1 });
+  }
+  saveCartToLocalStorage(); // Save to localStorage
+  updateCartCount(); // Update the count in real-time
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  updateCartCount(); // Update the cart count on page load
+});
+
+    </script>
+  </body>
+</html>
