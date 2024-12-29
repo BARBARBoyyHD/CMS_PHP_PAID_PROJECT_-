@@ -8,22 +8,19 @@
     <title>Seblaktasti</title>
 </head>
 <body>
-    <main class="min-h-screen flex flex-col md:flex-row">
-       
-        <section class="hidden md:flex md:w-[680px] w-full h-[680px] bg-[#982B1C] justify-center items-center">
-            <img src="./assets/seblaktasti.png" alt="Seblaktasti" class="max-w-full max-h-full object-contain">
-        </section>
-       
-        <section class="md:w-[680px] w-full h-[680px] flex justify-center items-center">
-            <div class="w-auto h-auto flex flex-col justify-center items-center gap-2">
-                <a href="php/login.php" class="w-[150px] h-[40px] rounded-[4px] flex justify-center items-center bg-[#982B1C] font-bold text-white hover:bg-red-700 transition">
-                    Login as User
-                </a>
-                <a href="php/adminLogin.php" class="w-[150px] h-[40px] rounded-[4px] flex justify-center items-center  bg-[#982B1C]  font-bold text-white hover:bg-red-700 transition">
-                    Login as Admin
+    <main class="bg-[url('./assets/seblakimg.jpg')] bg-center bg-cover bg-no-repeat justify-center items-center w-full h-[100vh]  min-h-screen flex flex-col md:flex-row">
+        <section class="md:w-[670px] w-full h-[680px] flex justify-center items-center">
+            <div class="w-[300px] h-auto flex flex-col justify-center gap-2 ">
+                <h1 class="text-5xl text-white  font-bold">Mari Nikmati Seblak <h1 class="text-5xl text-orange-500 font-bold">Tasti</h1></h1>
+                <a href="php/login.php" class="w-[150px] h-[60px] rounded-[10px] flex justify-center items-center bg-orange-500 font-bold text-white hover:bg-red-700 transition">
+                    Get Started
                 </a>
             </div>
         </section>
+        <section class=" hidden md:flex md:w-[680px] w-full h-[680px]  flex justify-center items-center">
+            
+        </section>
+        <a href="./"></a>
     </main>
 </body>
 </html>
